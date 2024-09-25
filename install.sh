@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# curl -sSL https://raw.githubusercontent.com/deNetzwerkkabel/volkswagentv/refs/tags/0.1/install.sh | bash
+
 # Variablen
 ZIP_FILE="/tmp/volkswagentv.zip"
 USER_DIR="$HOME/volkswagentv"
