@@ -1,17 +1,20 @@
 #!/bin/bash
 
 # Variablen
-SERVER_URL="http://example.com/path/to/file.zip" # URL der .zip-Datei
-ZIP_FILE="/tmp/file.zip"
-USER_DIR="$HOME/my_directory"
+ZIP_FILE="/tmp/volkswagentv.zip"
+USER_DIR="$HOME/volkswagentv"
 INDEX_FILE="$USER_DIR/index.html"
 
-# 1. Herunterladen der .zip-Datei
-echo "Lade Datei herunter..."
-wget -O "$ZIP_FILE" "$SERVER_URL"
+# 1. Download of the .zip-File
+echo "Lade die neuste Version von GitHub herunter"
+curl -s https://api.github.com/repos/deNetzwerkkabel/volkswagentv/releases/latest \
+| grep "browser_download_url.*zip" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget  -O "$ZIP_FILE" -qi -
 
-# 2. Entpacken der .zip-Datei in das User-Verzeichnis
-echo "Entpacke die Datei..."
+# 2. Upacking of the .zip-File into home-Directory
+echo "Entpacke alle Dateien..."
 mkdir -p "$USER_DIR"
 unzip "$ZIP_FILE" -d "$USER_DIR"
 
@@ -35,7 +38,7 @@ Exec=chromium-browser --kiosk --disable-infobars --noerrdialogs --disable-sessio
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
-Name=Chromium Kiosk Mode
+Name=VolkswagenTV Kiosk-Mode
 EOL
 
-echo "Fertig! Chromium wird im Kiosk-Modus bei Systemstart ausgeführt."
+echo "Fertig! VolkswagenTV wird beim nächsten Neustart automatisch gestartet"
