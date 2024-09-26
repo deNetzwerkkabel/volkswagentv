@@ -4,8 +4,8 @@
 
 # Variablen
 ZIP_FILE="/tmp/volkswagentv.zip"
-USER_DIR="$HOME/volkswagentv"
-INDEX_FILE="$USER_DIR/index.html"
+USER_DIR="$HOME"
+INDEX_FILE="$USER_DIR/volkswagentv/index.html"
 
 # 1. Download of the .zip-File
 echo "Lade die neuste Version von GitHub herunter"
