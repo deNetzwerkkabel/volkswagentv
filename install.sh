@@ -4,7 +4,7 @@
 
 # Variablen
 ZIP_FILE="/tmp/volkswagentv.zip"
-USER_DIR="$HOME"
+USER_DIR="$HOME/volkswagentv"
 INDEX_FILE="$USER_DIR/volkswagentv/index.html"
 
 # 1. Download of the .zip-File
