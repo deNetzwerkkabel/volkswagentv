@@ -42,6 +42,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./source.zip
-          asset_name: source.zip
+          asset_path: ./volkswagentv.zip
+          asset_name: volkswagentv.zip
           asset_content_type: application/zip
