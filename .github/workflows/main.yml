@@ -17,7 +17,7 @@ jobs:
       # 2. Erstellen der ZIP-Datei
       - name: Zip source code
         run: |
-          zip -r source.zip .
+          zip -r volkswagentv.zip .
 
       # 3. Erstellen eines Releases
       - name: Create Release
