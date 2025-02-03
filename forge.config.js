@@ -41,4 +41,17 @@ module.exports = {
       [FuseV1Options.OnlyLoadAppFromAsar]: true,
     }),
   ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      platforms: ['darwin', 'linux', 'windows'],
+      config: {
+        repository: {
+          owner: 'deNetzwerkkabel',
+          name: 'volkswagentv'
+        },
+        prerelease: true
+      }
+    }
+  ]
 };
