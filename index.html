@@ -109,7 +109,7 @@
 
         const loadDealers = async () => {
             try {
-                const response = await fetch('https://v3-82-0.gsl.feature-app.io/v1-273-0/bff-search/dealers?serviceConfigEndpoint=%7B%22endpoint%22%3A%7B%22type%22%3A%22publish%22%2C%22country%22%3A%22de%22%2C%22language%22%3A%22de%22%2C%22content%22%3A%22onehub_pkw%22%2C%22envName%22%3A%22prod%22%2C%22testScenarioId%22%3Anull%7D%2C%22signature%22%3A%22eXxF3Vp4siIxU67pK2Vs14eGqdMbD0HzeFcn3b058j8%3D%22%7D&lufthansaApiKey=h0CQWvPYSBvp5KYXUpRU4FpZrnl0tZx1&query=%7B%22type%22%3A%22DEALER%22%2C%22language%22%3A%22de-DE%22%2C%22countryCode%22%3A%22DE%22%2C%22dealerServiceFilter%22%3A%5B%5D%2C%22usePrimaryTenant%22%3Atrue%2C%22name%22%3A%22+%22%7D');
+                const response = await fetch('https://v3-95-0.gsl.feature-app.io/v1-273-0/bff-search/dealers?serviceConfigEndpoint=%7B%22endpoint%22%3A%7B%22type%22%3A%22publish%22%2C%22country%22%3A%22de%22%2C%22language%22%3A%22de%22%2C%22content%22%3A%22onehub_pkw%22%2C%22envName%22%3A%22prod%22%2C%22testScenarioId%22%3Anull%7D%2C%22signature%22%3A%22eXxF3Vp4siIxU67pK2Vs14eGqdMbD0HzeFcn3b058j8%3D%22%7D&lufthansaApiKey=h0CQWvPYSBvp5KYXUpRU4FpZrnl0tZx1&query=%7B%22type%22%3A%22DEALER%22%2C%22language%22%3A%22de-DE%22%2C%22countryCode%22%3A%22DE%22%2C%22dealerServiceFilter%22%3A%5B%5D%2C%22usePrimaryTenant%22%3Atrue%2C%22name%22%3A%22+%22%7D');
                 const data = await response.json();
                 const sortedDealers = data.dealers.sort((a, b) => a.name.localeCompare(b.name));
                 loadedDealers = sortedDealers.map(dealer => ({
