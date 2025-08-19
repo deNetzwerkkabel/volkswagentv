@@ -210,7 +210,7 @@
 
         const downloadCars = async (page, dealerId) => {
             try {
-                const response = await fetch(`https://v3-82-0.gsl.feature-app.io/bff/car/search?t_partner=${dealerId}&sort=DATE_OFFER&sortdirection=ASC&pageitems=12&page=${page}&market=passenger&country=DE&language=de&oneapiKey=nOqkwPxxu8ViK9aaHvTkglzVZAlX4yIx&endpoint=%7B%22endpoint%22%3A%7B%22type%22%3A%22publish%22%2C%22country%22%3A%22de%22%2C%22language%22%3A%22de%22%2C%22content%22%3A%22onehub_pkw%22%2C%22envName%22%3A%22prod%22%2C%22testScenarioId%22%3Anull%2C%22isCloud%22%3Atrue%7D%2C%22signature%22%3A%22DDI5cVcqgXftyNeQrMuw%2Fbb9jUj%2BZrWtTRzYnLVkHzY%3D%22%7D&dataVersion=2A7706719FE556C689F695D1B263339A`);
+                const response = await fetch(`https://v3-95-0.gsl.feature-app.io/bff/car/search?t_partner=${dealerId}&sort=DATE_OFFER&sortdirection=ASC&pageitems=12&page=${page}&market=passenger&country=DE&language=de&oneapiKey=nOqkwPxxu8ViK9aaHvTkglzVZAlX4yIx&endpoint=%7B%22endpoint%22%3A%7B%22type%22%3A%22publish%22%2C%22country%22%3A%22de%22%2C%22language%22%3A%22de%22%2C%22content%22%3A%22onehub_pkw%22%2C%22envName%22%3A%22prod%22%2C%22testScenarioId%22%3Anull%2C%22isCloud%22%3Atrue%7D%2C%22signature%22%3A%22DDI5cVcqgXftyNeQrMuw%2Fbb9jUj%2BZrWtTRzYnLVkHzY%3D%22%7D&dataVersion=2A7706719FE556C689F695D1B263339A`);
                 const data = await response.json();
                 return data;
             } catch (error) {
