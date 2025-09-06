@@ -1,0 +1,26 @@
+name: Check and Update URLs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  check-urls:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Run URL check script
+      run: python /Users/mortenkrisch/Documents/volkswagentv/check_and_update_urls.py

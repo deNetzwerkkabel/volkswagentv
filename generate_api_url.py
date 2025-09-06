@@ -9,6 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.actions.wheel_input import ScrollOrigin
 from urllib.parse import urlparse
 import re
+from check_and_update_urls import process_files
 
 options = Options()
 options.set_capability('goog:loggingPrefs', {'performance': 'ALL'})
@@ -59,3 +60,6 @@ def update_html_file(file_path, pattern, replacement):
 # Ersetze die Domain in den HTML-Dateien
 update_html_file("showCars.html", r"https://v\d+-\d+-\d+\.gsl\.feature-app\.io", f"https://{extracted_domain}")
 update_html_file("index.html", r"https://prod-ds\.dcc\.feature-app\.io", f"https://{extracted_domain}")
+
+# URLs in HTML und CSS-Dateien überprüfen und aktualisieren
+process_files()
