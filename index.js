@@ -7,19 +7,7 @@ const feed = `${server}/deNetzwerkkabel/volkswagentv/${process.platform}-${proce
 autoUpdater.setFeedURL({ url: feed });
 
 app.on('ready', () => {
-  autoUpdater.checkForUpdatesAndNotify();
-
-  autoUpdater.on('update-available', () => {
-    dialog.showMessageBox({
-      type: 'info',
-      title: 'Update verfügbar',
-      message: 'Ein neues Update wird heruntergeladen und installiert.'
-    });
-  });
-
-  autoUpdater.on('update-downloaded', () => {
-    autoUpdater.quitAndInstall();
-  });
+  autoUpdater.checkForUpdates();
 
   const createWindow = () => {
     const win = new BrowserWindow({

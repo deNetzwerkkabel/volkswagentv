@@ -1,7 +1,7 @@
 {
   "name": "volkswagentv",
-  "version": "1.0.0",
-  "description": "Installation auf einem Linux-PC mit grafischer Benutzeroberfläche (bevorzugt Gnome) mithilfe dieses Befehls:\r `curl -sSL https://raw.githubusercontent.com/deNetzwerkkabel/volkswagentv/refs/heads/master/install.sh | bash`\r Script wurde derzeit nur auf Ubuntu 24.04 getestet",
+  "version": "1.0.3",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,6 +24,7 @@
     "electron": "^32.1.2"
   },
   "dependencies": {
+    "electron-forge": "^5.2.4",
     "electron-squirrel-startup": "^1.0.1",
     "update-electron-app": "^3.1.1"
   }
