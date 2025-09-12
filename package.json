@@ -1,7 +1,7 @@
 {
   "name": "volkswagentv",
   "version": "1.0.3",
-  "description": "",
+  "description": "Program to show cars for sale on a TV",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
