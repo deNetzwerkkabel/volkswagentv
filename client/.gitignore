@@ -1,0 +1,5 @@
+dealers.json
+dealer.lock
+cars.json
+data/*
+__pycache__/
